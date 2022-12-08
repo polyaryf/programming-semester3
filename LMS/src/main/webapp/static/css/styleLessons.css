@@ -1,0 +1,126 @@
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+a.signOut {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 240px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.title{
+    margin: 5px;
+}
+
+.main {
+    width: calc(100% - 3rem);
+    max-width: 800px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+#description {
+    width: 450px;
+    height: 200px;
+}
+
+#experience {
+    width: 100px;
+    height: 30px;
+}
+
+h5.h5 {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 12px;
+
+}
+.button-like {
+    border: 2px solid #8a8a8a;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 9px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3rem;
+    color: #8a8a8a;
+    transition: all ease 0.4s;
+    margin-bottom: 10px;
+}
+
+.button-like span {
+    margin-left: 0.5rem;
+}
+
+.button-like .fa,
+.button-like span {
+    transition: all ease 0.4s;
+}
+
+.button-like:focus {
+    background-color: transparent;
+}
+
+.button-like:focus .fa,
+.button-like:focus span {
+    color: #8a8a8a;
+}
+
+.button-like:hover {
+    border-color: #f08481;
+    background-color: transparent;
+}
+
+.button-like:hover .fa,
+.button-like:hover span {
+    color: #f08481;
+}
+
+.liked {
+    background-color: #f08481;
+    border-color: #f08481;
+}
+
+.liked .fa,
+.liked span {
+    color: #fefefe;
+}
+
+.liked:focus {
+    background-color: #f08481;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+    color: #fefefe;
+}
+
+.liked:hover {
+    background-color: #f08481;
+    border-color: #f08481;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+    color: #fefefe;
+}

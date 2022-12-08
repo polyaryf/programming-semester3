@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Navbar</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styleAccess.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <div class="signup">
+        <form id="sign-up-form" method="POST" action="/sign-up" enctype="application/x-www-form-urlencoded">
+            <label id="signUp" for="chk" aria-hidden="true">Sign up</label>
+            <input class="base" type="text" name="firstName" placeholder="First name" required>
+            <input class="base" type="text" name="lastName" placeholder="Last name" required>
+            <input class="base" type="email" name="email" placeholder="Email" required>
+            <input class="base" type="password" name="password" placeholder="Password" required>
+            <select id="status" name="status">
+                <option value="STUDENT">Student</option>
+                <option value="TEACHER">Teacher</option>
+            </select>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+    <div class="login">
+        <form id="login-form" method="POST" action="/login" enctype="application/x-www-form-urlencoded">
+            <label id="loginLabel" for="chk" aria-hidden="true">Login</label>
+            <input class="base" type="email" name="email" placeholder="Email" required="">
+            <input  class="base" type="password" name="password" placeholder="Password" required="">
+            <div class="type">
+                <h5>I'm </h5>
+                <input class="type" name="status" type="radio" value="TEACHER">
+                <h5>Teacher</h5>
+                <input class="type" name="status" type="radio" value="STUDENT">
+                <h5>Student</h5>
+            </div>
+            <button type="submit" onclick="doSignOut('/profile')">Login</button>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    function doSignOut(url){
+        document.location.replace(url)
+    }
+
+    $(document).ready(() => {
+        let form = $("#sign-up-form")
+        let firstNameInput = form.find("[name='firstName']")
+        let lastNameInput = form.find("[name='lastName']")
+        let emailInput = form.find("[name='email']")
+        let passwordInput = form.find("[name='password']")
+        let statusSelect = form.find("[name='status']")
+
+        form.submit(() => {
+            let signUpForm = {
+                firstName: firstNameInput.val(),
+                lastName: lastNameInput.val(),
+                email: emailInput.val(),
+                password: passwordInput.val(),
+                status: statusSelect.val()
+            }
+            $.ajax({
+                url: "/sign-up",
+                method: "POST",
+                data: JSON.stringify(signUpForm),
+                contentType: "application/json"
+            }).done((data) => {
+                document.location.replace ('http://localhost:8080/profile')
+            }).fail(() => {
+                alert("Try again");
+            });
+            return false
+        })
+    })
+</script>
+</body>
+</html>

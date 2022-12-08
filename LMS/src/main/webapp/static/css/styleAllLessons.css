@@ -1,0 +1,76 @@
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px;
+}
+
+.lessonTitle{
+    width: 250px;
+}
+
+a.create-lesson {
+    text-align: center;
+    font-size: 16px;
+    border: 10px solid #272c35;
+    background-color: #272c35;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+}
+
+article.create-lesson {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+h5.h5 {
+    text-align: left;
+    margin-left: 12px;
+    margin-bottom: 0;
+    color: #f4a283;
+}
+
+a.video {
+    font-size: 16px;
+    color: #f4a283;
+}
+
+a.file {
+    font-size: 18px;
+}
+

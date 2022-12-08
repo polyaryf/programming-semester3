@@ -1,0 +1,73 @@
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.lessonTitle{
+    width: 250px;
+}
+
+input{
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#description {
+    width: 450px;
+    height: 200px;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button.save {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.button:hover, a:hover {
+    opacity: 0.7;
+}
+
+h5.h5 {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0;
+}

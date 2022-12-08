@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styleHeader.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/styleEditTeacherProfile.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="blurry-filter"></div>
+<header>
+	<div>
+		<article id="title"><span class="name">study.practice.repeat.</span></article>
+		<article id="reference">
+			<a class="signOut" target="_blank" rel="noopener">
+				<svg width="60" height="24" viewBox="0 0 60 60">
+					<p onclick="doSignOut('/sign-out')">sign out</p>
+				</svg>
+			</a>
+		</article>
+	</div>
+</header>
+<section id="folders">
+	<article><a href="/profile">Profile</a></article>
+	<article><a href="/subscribers">Subscribers</a></article>
+	<article><a href="/my-lessons">My lessons</a></article>
+</section>
+<main>
+
+	<div class="card">
+		<form id="edit-form" method="POST" action="/profile-teacher-edit" enctype="multipart/form-data">
+			<h5 class="h5">Upload your photo:</h5>
+			<input type="file" name="photoFile" required>
+			<h5 class="h5">Description:</h5>
+			<input class="description" type="text" name="description" placeholder="Write about yourself and your course" required>
+			<h5 class="h5">Set experience:</h5>
+			<div class="inputExp">
+				<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+					-
+				</button>
+
+				<input id="experience" type="number" min="0" name="experience" placeholder="experience" required>
+
+				<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+					+
+				</button>
+			</div>
+			<h5 class="h5">Telegram username:</h5>
+			<input type="text" name="tgUsername" placeholder="Link" required>
+			<button type="submit" class="save" >Save</button>
+
+		</form>
+	</div>
+
+</main>
+
+<footer></footer>
+<script>
+
+	function doSignOut(url){
+		document.location.replace(url)
+	}
+
+</script>
+
+</body>
+</html>

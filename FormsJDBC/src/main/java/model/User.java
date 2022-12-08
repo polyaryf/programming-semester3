@@ -1,2 +1,17 @@
-package model;public class User {
+package model;
+
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class User {
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String courseName;
+    private String passwordHash;
+    private Integer age;
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class UsersRepositoryTemplImpl implements UsersRepository  {
+public class UsersRepositoryTempImpl implements UsersRepository  {
     private final List<User> data = new ArrayList<>();
     private int incrementValue = 0;
 
